@@ -12,7 +12,7 @@ describe("jokes-router", function() {
       return (
         request(server)
           .get("/api/jokes")
-          // .set("Authorization", "token")
+          // .set("Authorization", "token") ?? couldn't figure this out
           .expect("Content-Type", /json/)
           .then(res => {
             expect(res.status).toBe(401);
